@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -23,6 +24,7 @@ public class RedisDistributedLock {
      * 尝试获取锁，默认持有时间5s，5s后锁自动释放
      * 如果业务执行时间过长,会导致锁自动释放,其他线程可能会重复获取锁
      * 如果获取锁带有等待时间,一个持有锁的进程崩溃,会导致其他进程一直等待直到获得到锁
+     *
      * @param key
      * @return
      */
