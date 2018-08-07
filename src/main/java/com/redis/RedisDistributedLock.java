@@ -46,8 +46,10 @@ public class RedisDistributedLock {
      */
     public void unlock() {
         RLock lock = lockThreadLocal.get();
-        if (lock != null && lock.isLocked()) {
+        // 如果业务执行时间过长导致锁自动释放(key时间过期自动删除),当前线程认为自己当前还持有锁
+        if (lock != null && lock.isLocked() && lock.isHeldByCurrentThread()) {
             lock.unlock();
+            lockThreadLocal.remove();
         }
     }
 }
