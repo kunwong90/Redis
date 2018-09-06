@@ -1,7 +1,7 @@
 package com.redis.aop;
 
-import com.redis.RedisDistributedLock;
 import com.redis.annotation.RedisLock;
+import com.redis.redisson.RedisDistributedLock;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 @Component
