@@ -1,21 +1,15 @@
-package com.redis;
+package com.redis.redisson;
 
-import com.redis.redisson.RedisListHelper;
+import com.redis.BaseTest;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import sun.reflect.generics.visitor.Reifier;
 
 import javax.annotation.Resource;
 
-import static org.junit.Assert.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-service.xml"})
-public class RedisListHelperTest {
+
+public class RedisListHelperTest extends BaseTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RedisListHelperTest.class);
 

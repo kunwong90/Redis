@@ -1,24 +1,16 @@
-package com.redis;
+package com.redis.redisson;
 
-import com.redis.redisson.RedisHashHelper;
+import com.redis.BaseTest;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
-import javax.naming.Name;
-
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
-import static org.junit.Assert.*;
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-service.xml"})
-public class RedisHashHelperTest {
+
+public class RedisHashHelperTest extends BaseTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RedisHashHelperTest.class);
 
