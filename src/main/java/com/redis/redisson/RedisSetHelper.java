@@ -35,6 +35,7 @@ public class RedisSetHelper {
 
     /**
      * 随机返回一个元素并删除
+     *
      * @param key
      * @return
      */
@@ -51,6 +52,7 @@ public class RedisSetHelper {
     /**
      * 将结果保存到destKey中，并返回destKey集合中的元素数量
      * 如果destKey已存在，则将其覆盖
+     *
      * @param destKey
      * @param keys
      * @return
@@ -63,6 +65,7 @@ public class RedisSetHelper {
 
     /**
      * 返回第n个key不在第n+1个key中元素的数量
+     *
      * @param keys
      * @return
      */

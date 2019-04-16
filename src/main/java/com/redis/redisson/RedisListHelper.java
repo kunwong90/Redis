@@ -47,6 +47,7 @@ public class RedisListHelper {
      * 获取list指定位置的元素
      * 0表示第一个元素，1表示第二个元素，以此类推
      * -1表示倒数第一个元素，-2表示倒数第二个元素，以此类推
+     *
      * @param key
      * @param index
      * @return

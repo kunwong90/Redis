@@ -20,6 +20,7 @@ public class RedisKeyHelper {
 
     /**
      * 批量删除key
+     *
      * @param keys
      * @return
      */
@@ -31,6 +32,7 @@ public class RedisKeyHelper {
 
     /**
      * 持久化指定key
+     *
      * @param key
      * @return
      */
@@ -41,6 +43,7 @@ public class RedisKeyHelper {
 
     /**
      * 设置指定key的过期时间
+     *
      * @param name
      * @param timeToLive
      * @param timeUnit
@@ -52,8 +55,7 @@ public class RedisKeyHelper {
     }
 
     /**
-     *
-     * @param name key的名字
+     * @param name      key的名字
      * @param timestamp 单位毫秒
      * @return
      */

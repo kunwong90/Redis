@@ -12,9 +12,10 @@ public class RedisValueHelperTest extends BaseTest {
 
     @Test
     public void set() {
-        for (int i = 0; i < 10000; i++) {
-            redisValueHelper.set("key" + i, "value" + i);
-            System.out.println(i);
+        for (int i = 0; i < 10; i++) {
+            String key = "key" + i;
+            redisValueHelper.set(key, "value" + i);
+            System.out.println(redisValueHelper.get(key));
         }
     }
 }

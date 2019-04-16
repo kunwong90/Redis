@@ -18,7 +18,7 @@ public class RedisValueHelper {
 
     public void set(String key, String value) {
         RBucket<String> bucket = redissonClient.getBucket(key);
-        bucket.setAsync(value);
+        bucket.set(value);
     }
 
     public String get(String key) {
